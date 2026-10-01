@@ -18,54 +18,57 @@ export const navigation = [
 
 export const experiences = [
   {
-    organization: "Brown University Health",
-    team: "Radiology AI Lab",
-    role: "Research Assistant",
-    dates: "Aug 2025 to Present",
-    location: "Remote",
-    current: true,
-    bullets: [
-      "Researching vision-language models and deep learning for breast cancer digital breast tomosynthesis imaging.",
-      "Fine-tuning, evaluating, and benchmarking architectures including MedGemma and 3D Swin Transformers.",
-      "Co-authoring an ongoing research paper; code remains private pending publication clearance.",
-    ],
+    "organization": "Bruin Software Engineers",
+    "team": "Quantitative Finance Fellowship",
+    "role": "Quant Finance Fellow",
+    "dates": "Sep 2026 to Present",
+    "location": "Los Angeles, CA",
+    "current": true,
+    "bullets": [
+      "Selected for the competitive nine-week Quantitative Finance fellowship from a UCLA-wide applicant pool.",
+      "Working on a guided project on trading algorithms and quantitative strategies, with mentorship from industry professionals and BSE alumni.",
+      "Attending industry sessions and technical talks with engineers from Google DeepMind, Citadel, and Jane Street."
+    ]
   },
   {
-    organization: "Bruin Software Engineers",
-    team: "Quantitative Finance Fellowship",
-    role: "Fellow",
-    dates: "Fall 2026 to Present",
-    location: "UCLA",
-    current: true,
-    bullets: [
-      "Accepted into the selective Fall 2026 fellowship in the Quantitative Finance track.",
-      "The fellowship includes technical projects, industry sessions, and recruiting preparation.",
-    ],
+    "organization": "Brown University",
+    "team": "Radiology AI Lab",
+    "role": "Research Assistant",
+    "dates": "Aug 2025 to Present",
+    "location": "Providence, RI · Remote",
+    "current": true,
+    "bullets": [
+      "Researching AI-assisted breast cancer detection under Dr. Zhicheng Jiao using vision-language models and deep learning.",
+      "Fine-tuning and benchmarking MedGemma and 3D Swin Transformers on digital breast tomosynthesis imaging.",
+      "Co-authoring an ongoing research paper and mentoring incoming assistants on training pipelines. Research code remains private pending publication clearance."
+    ]
   },
   {
-    organization: "Fairleigh Dickinson University",
-    team: "Deep Learning Research",
-    role: "Research Assistant",
-    dates: "Mar 2022 to Jun 2026",
-    location: "Hybrid",
-    current: false,
-    bullets: [
-      "Worked on CNN and deep-learning research pipelines over several years.",
-      "Co-authored four publications and presented research at events including Princeton and Johns Hopkins.",
-    ],
+    "organization": "Builder Bears",
+    "team": "FIRST Robotics Competition · Team 10366",
+    "role": "Lead Programmer",
+    "dates": "Jun 2024 to Jun 2026",
+    "location": "Bergenfield, NJ",
+    "current": false,
+    "bullets": [
+      "Led Java software development for autonomous and driver-operated robot controls.",
+      "Guided fellow programmers through coding concepts and code structure.",
+      "Worked with mechanical and electrical teammates to integrate hardware and software. The team earned the All-Star Rookie Award and competed at state-level events."
+    ]
   },
   {
-    organization: "Builder Bears / FIRST Robotics",
-    team: "Team 10366",
-    role: "Lead Programmer",
-    dates: "Jun 2024 to Jun 2026",
-    location: "",
-    current: false,
-    bullets: [
-      "Led robot software development, primarily in Java.",
-      "Built software for real robotic systems in collaboration with an engineering team.",
-    ],
-  },
+    "organization": "Fairleigh Dickinson University",
+    "team": "Medical Imaging Research",
+    "role": "Research Assistant",
+    "dates": "Mar 2022 to Jun 2026",
+    "location": "Teaneck, NJ · Hybrid",
+    "current": false,
+    "bullets": [
+      "Researched AI-assisted skin cancer detection through deep learning and medical imaging.",
+      "Trained and benchmarked EfficientNetV2 and DINOv2 for dermoscopic lesion classification. Presented research at Princeton and Johns Hopkins.",
+      "Co-authored four publications, including work on demographic factors in melanoma classification and graph neural networks."
+    ]
+  }
 ];
 
 type Project = { title: string; category: string; description: string; tags: string[]; url?: string; demoUrl?: string; featured?: boolean };
@@ -73,23 +76,23 @@ export const projects: Project[] = [
   {
     title: "Pokémon VGC Predictor",
     category: "Probabilistic modeling",
-    description: "A project exploring Bayesian inference and probabilistic modeling to predict competitive Pokémon VGC outcomes.",
-    tags: ["Bayesian inference", "Probabilistic modeling", "Data analysis"],
+    description: "A Python command-line tool for Pokémon VGC closed team sheet matches. Uses usage statistics to estimate opponent movesets, items, and abilities, then compares team matchups and possible four-Pokémon selections.",
+    tags: ["Python", "Probabilistic modeling", "Data analysis"],
     url: "https://github.com/vatssavvya/pokemon-vgc-cts-predictor",
     featured: true,
   },
   {
     title: "ClearCare",
     category: "Backend engineering",
-    description: "Built with a teammate at a hackathon. My main contribution was backend work with FastAPI and PostgreSQL.",
+    description: "A two-person hackathon project that turns discharge documents into plain-language care plans. My main contribution was backend work with FastAPI and PostgreSQL.",
     tags: ["FastAPI", "PostgreSQL", "Team project"],
     url: "https://github.com/vatssavvya/clearcare",
   },
   {
     title: "AI Research Agent",
     category: "Structured AI software",
-    description: "An agent that searches the web and organizes its findings. Uses LangChain for the agent and Pydantic for structured output.",
-    tags: ["LangChain", "Pydantic", "Web research"],
+    description: "A Python research assistant that searches the web and Wikipedia, organizes findings with Pydantic, and saves summaries and sources to a local text file. Built with LangChain.",
+    tags: ["Python", "LangChain", "Pydantic", "Web research"],
     url: "https://github.com/vatssavvya/Self-Learning-AI-Agent",
   },
 ];
@@ -105,7 +108,7 @@ export const research = [
   {
     institution: "Fairleigh Dickinson University",
     title: "Deep learning & CNN research",
-    description: "Several years of research on CNN and deep-learning pipelines, resulting in four co-authored publications and presentations at events including Princeton and Johns Hopkins.",
+    description: "Research on skin cancer detection using deep learning, including EfficientNetV2 and DINOv2 for lesion classification. Co-authored four publications and presented at Princeton and Johns Hopkins.",
     tags: ["CNNs", "Deep learning", "Research pipelines"],
     note: "4 co-authored publications",
   },

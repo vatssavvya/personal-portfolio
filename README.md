@@ -67,7 +67,7 @@ SEO and Open Graph title/description metadata are in `app/layout.tsx`. The custo
 
 ## Content verification
 
-All three project URLs were matched against Savya's public GitHub repositories. The AI Research Agent repository README identifies the research assistant and structured output capabilities. Copy follows the supplied brief rather than expanding claims from repository descriptions. Brown code has no public link; its paper remains in progress. The fellowship has no completed project claim. ClearCare describes a backend contribution to a two-person build. Publication titles and metrics have not been invented.
+All three project URLs were matched against Savya's public GitHub repositories. The AI Research Agent repository README identifies the research assistant and structured output capabilities. Experience follows the order and role details in the supplied LinkedIn PDF: Bruin Software Engineers, Brown University, Builder Bears, then Fairleigh Dickinson University. Project descriptions use the public repository READMEs while preserving the stated scope of Savya’s contribution. Brown code has no public link; its paper remains in progress. The fellowship has no completed project claim. ClearCare describes a backend contribution to a two-person build. Publication titles and metrics have not been invented.
 
 ### Verified repositories
 

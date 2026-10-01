@@ -2,7 +2,7 @@
 
 - `pnpm install`: completed with pinned Next.js 16.3.7 and the committed lockfile.
 - `pnpm lint`: passed with no errors or warnings after fixing the PostCSS export.
-- `pnpm build`: passed; the portfolio is prerendered as a static route.
+- `pnpm exec next build --webpack`: passed; the portfolio is prerendered as a static route.
 - `pnpm typecheck`: passed.
 - Production server: returned HTTP 200 for the root, JavaScript/CSS bundles, favicon, Apple icon, robots, and sitemap routes.
 - Browser console: no errors or warnings during the production preview review.
@@ -16,3 +16,7 @@
 - Reduced motion: stylesheet disables animation, transitions, and smooth scrolling under `prefers-reduced-motion: reduce`.
 
 Lighthouse scores were not measured. No Vercel deployment was performed; deployment instructions are in README.md.
+
+## LinkedIn content update
+
+Experience order and role details were checked against the supplied three-page LinkedIn export. Project descriptions were checked against the three public repository READMEs. The PDF has no Projects section. No em dashes are present in the rendered page. Lint, production build, and type checking passed; the updated desktop and mobile preview showed no console errors or horizontal overflow.
