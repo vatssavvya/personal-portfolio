@@ -137,6 +137,21 @@ svg { flex-shrink: 0; }
 @supports (animation-timeline: scroll()) {
   .reading-progress { animation: reading-progress linear both; animation-timeline: scroll(root); }
 }
+@supports (animation-timeline: view()) {
+  [data-scroll-motion] {
+    animation: scroll-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 22%;
+  }
+}
+@keyframes scroll-reveal {
+  from { opacity: .25; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.social-link { color: var(--accent); }
+.social-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.contact-label { display: inline-flex; align-items: center; gap: 10px; }
+.footer-socials .social-icon { width: 14px; height: 14px; }
 @keyframes reading-progress { to { transform: scaleX(1); } }
 .hero h1 { font-size: clamp(68px, 8vw, 104px); letter-spacing: -4.5px; }
 .hero-subtitle { font-family: var(--serif); font-style: italic; font-size: 25px; color: var(--accent); }
@@ -149,8 +164,8 @@ svg { flex-shrink: 0; }
 .hero-note>a:hover { padding-left: 8px; }
 .button, .contact-link, .text-link, .project-title-link { transition: color .2s, background .2s, transform .2s; }
 .button-primary:hover { transform: translateY(-2px); }
-a svg { transition: transform .25s ease; }
-a:hover svg, a:focus-visible svg { transform: translate(2px, -2px); }
+a .link-arrow { transition: transform .25s ease; }
+a:hover .link-arrow, a:focus-visible .link-arrow { transform: translate(2px, -2px); }
 .project-title-link { display: inline; }
 .project-title-link>svg { display: inline; width: 17px; height: 17px; margin-left: 10px; vertical-align: middle; opacity: .5; }
 .project-title-link:hover>svg { opacity: 1; }

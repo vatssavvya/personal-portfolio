@@ -1,6 +1,6 @@
 import { Motion } from "@/components/motion";
 import { Header } from "@/components/header";
-import { Arrow, GitHubIcon } from "@/components/icons";
+import { Arrow, GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
 import { site, experiences, projects, research, skills, currently, publications, bseProject } from "@/lib/portfolio";
 
@@ -21,7 +21,7 @@ export default function Home() {
           <h1 id="hero-title">Savya Vats</h1>
           <p className="hero-subtitle">Computer Science at UCLA</p>
           <p className="hero-description">I study Computer Science at UCLA. I work on medical imaging research and backend projects, and I’m exploring quantitative finance through Bruin Software Engineers.</p>
-          <div className="hero-actions"><a className="button button-primary" href="#projects">View projects <Arrow /></a><ExternalLink href={site.github} className="button button-secondary"><GitHubIcon />GitHub</ExternalLink><ExternalLink href={site.linkedin} className="text-link">LinkedIn</ExternalLink></div>
+          <div className="hero-actions"><a className="button button-primary" href="#projects">View projects <Arrow /></a><ExternalLink href={site.github} className="button button-secondary social-link"><GitHubIcon />GitHub</ExternalLink><ExternalLink href={site.linkedin} className="button button-secondary social-link"><LinkedInIcon />LinkedIn</ExternalLink></div>
           <p className="hero-location">New York City and Los Angeles</p>
         </div>
         <aside className="hero-note" aria-labelledby="hero-note-heading">
@@ -38,13 +38,13 @@ export default function Home() {
       </section>
 
       <section className="section container" id="experience" aria-labelledby="experience-heading">
-        <SectionHeading id="experience-heading" title="Experience" action={<ExternalLink href={site.linkedin} className="text-link">Experience on LinkedIn</ExternalLink>} />
+        <SectionHeading id="experience-heading" title="Experience" action={<ExternalLink href={site.linkedin} className="text-link"><LinkedInIcon />Experience on LinkedIn</ExternalLink>} />
 
         <div className="experience-list">{experiences.map((experience) => <article className={`experience-row ${experience.current ? "current-role" : ""}`} key={experience.organization}><div className="experience-date"><span className="timeline-point" /><span>{experience.dates}</span><small>{experience.location || "Engineering team"}</small></div><div className="experience-content"><div className="role-heading"><div><h3>{experience.organization}</h3><p>{experience.role}<span className="separator">/</span>{experience.team}</p></div>{experience.current && <span className="current-badge">Current</span>}</div><ul>{experience.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul></div></article>)}</div>
       </section>
 
       <section className="section container" id="projects" aria-labelledby="projects-heading">
-        <SectionHeading id="projects-heading" title="Selected projects" action={<ExternalLink href={site.github} className="text-link">All repositories on GitHub</ExternalLink>} />
+        <SectionHeading id="projects-heading" title="Selected projects" action={<ExternalLink href={site.github} className="text-link"><GitHubIcon />All repositories on GitHub</ExternalLink>} />
 
         <div className="project-list">{allProjects.map((project) => <article key={project.title} className={project.featured ? "project-row featured-project" : "project-row"}>
           <div className="project-title"><p className="eyebrow">{project.category}</p><h3>{project.url ? <ExternalLink href={project.url} className="project-title-link">{project.title}</ExternalLink> : project.title}</h3>{project.featured && <span className="project-featured-label">Featured project</span>}</div>
@@ -63,8 +63,8 @@ export default function Home() {
 
       <section className="currently container" aria-labelledby="currently-heading"><div><h2 id="currently-heading">Currently</h2><p>What I’m working on now.</p></div><ul>{currently.map(item => <li key={item}>{item}</li>)}</ul></section>
 
-      <section className="contact container" id="contact" aria-labelledby="contact-heading"><div className="contact-row"><div><h2 id="contact-heading">Get in touch</h2><p>Feel free to reach out about software engineering, research, or a project.</p></div><div className="contact-links">{site.email && <a className="contact-link contact-email" href={`mailto:${site.email}`}>{site.email} <Arrow diagonal /></a>}<ExternalLink href={site.linkedin} className="contact-link">Connect on LinkedIn</ExternalLink><ExternalLink href={site.github} className="contact-link">GitHub</ExternalLink></div></div></section>
+      <section className="contact container" id="contact" aria-labelledby="contact-heading"><div className="contact-row"><div><h2 id="contact-heading">Get in touch</h2><p>Feel free to reach out about software engineering, research, or a project.</p></div><div className="contact-links">{site.email && <a className="contact-link contact-email" href={`mailto:${site.email}`}>{site.email} <Arrow diagonal /></a>}<ExternalLink href={site.linkedin} className="contact-link"><span className="contact-label"><LinkedInIcon />LinkedIn</span></ExternalLink><ExternalLink href={site.github} className="contact-link"><span className="contact-label"><GitHubIcon />GitHub</span></ExternalLink></div></div></section>
     </main>
-    <footer className="container footer"><a href="#home" className="brand-mark" aria-label="Back to top">SV</a><p>© {new Date().getFullYear()} Savya Vats</p><div className="footer-socials"><ExternalLink href={site.github}>GitHub</ExternalLink><ExternalLink href={site.linkedin}>LinkedIn</ExternalLink></div><a className="back-top" href="#home">BACK TO TOP <span aria-hidden="true">↑</span></a></footer>
+    <footer className="container footer"><a href="#home" className="brand-mark" aria-label="Back to top">SV</a><p>© {new Date().getFullYear()} Savya Vats</p><div className="footer-socials"><ExternalLink href={site.github}><GitHubIcon />GitHub</ExternalLink><ExternalLink href={site.linkedin}><LinkedInIcon />LinkedIn</ExternalLink></div><a className="back-top" href="#home">BACK TO TOP <span aria-hidden="true">↑</span></a></footer>
   </>;
 }

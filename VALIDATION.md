@@ -32,3 +32,10 @@ Lint, Webpack production build, and type checking passed. Desktop and mobile vie
 - UCLA email is visible as `vatssavvya@ucla.edu`, with the matching mailto destination.
 - Desktop and mobile contact layouts reviewed. Mobile navigation closes after choosing Contact; no horizontal overflow at the tested mobile width. Browser error log was empty.
 - Motion uses one-time intersection reveals with cleanup. Content is never hidden by CSS or dependent on JavaScript to appear. Reduced-motion preferences skip Web Animations and disable CSS motion.
+
+## LinkedIn logo and page scrolling
+
+- GitHub and LinkedIn now have matched icon sizes, alignment, and color in the hero, with corresponding logos in section links, Contact, and footer. Only arrow icons move on hover.
+- Modern browsers use view timelines for scroll-driven fade and vertical movement across 22 content blocks. Older browsers retain IntersectionObserver entrance animations.
+- Browser inspection confirmed all 22 scroll targets, native `view()` timelines, and pre-entry opacity/translation states. Completed content returns to full opacity and zero translation. No browser errors.
+- Lint, production build, and type checking passed.
