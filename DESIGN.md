@@ -1,6 +1,6 @@
 # Portfolio design decisions
 
-The blue redesign treats this site as a personal research and engineering portfolio. It uses midnight blue (#101722), pale blue (#91b9e8), muted slate, and off-white. Georgia headings pair with a simple system sans-serif. The monogram uses Savya’s initials; the introduction includes Savya’s Bergenfield background and UCLA studies.
+The blue redesign treats this site as a personal research and engineering portfolio. It uses midnight blue (#101722), pale blue (#91b9e8), muted slate, and off-white. Georgia headings pair with a simple system sans-serif. The monogram uses Savya’s initials; the introduction includes Savya’s New York City background and UCLA studies.
 
 The hero sidebar links to actual research, fellowship, and project sections. Project entries use distinct titles and descriptions in open rows, with the VGC predictor emphasized by typography and a blue rule. The experience section retains the LinkedIn order. No decorative chart implies project results, and no stock laboratory icon substitutes for a description of computational research.
 

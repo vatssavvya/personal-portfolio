@@ -20,7 +20,7 @@ export default function Home() {
           <p className="hero-subtitle">Computer Science at UCLA</p>
           <p className="hero-description">I study Computer Science at UCLA. I work on medical imaging research and backend projects, and I’m exploring quantitative finance through Bruin Software Engineers.</p>
           <div className="hero-actions"><a className="button button-primary" href="#projects">View projects <Arrow /></a><ExternalLink href={site.github} className="button button-secondary"><GitHubIcon />GitHub</ExternalLink><ExternalLink href={site.linkedin} className="text-link">LinkedIn</ExternalLink></div>
-          <p className="hero-location">Bergenfield, NJ <span aria-hidden="true">→</span> Los Angeles, CA</p>
+          <p className="hero-location">New York City and Los Angeles</p>
         </div>
         <aside className="hero-note" aria-labelledby="hero-note-heading">
           <p className="eyebrow" id="hero-note-heading">Where I’m spending my time</p>
@@ -32,7 +32,7 @@ export default function Home() {
 
       <section className="section container" id="about" aria-labelledby="about-heading">
         <SectionHeading id="about-heading" title="About me" />
-        <div className="about-grid"><div className="about-copy"><p className="lead">My main interest is software engineering, especially backend systems and infrastructure.</p><p>I’m a Computer Science student at UCLA’s Henry Samueli School of Engineering, with a math minor. I’m originally from Bergenfield, New Jersey. Before UCLA, I spent several years on deep-learning research and programmed robots for FIRST Robotics.</p><p>At Brown University Health, I research deep learning for breast cancer imaging. Outside research, I’m interested in how large software systems are built and maintained. I’m also in BSE’s Quantitative Finance fellowship at UCLA.</p></div><aside className="education"><div className="eyebrow">EDUCATION</div><div className="education-logo">UCLA<span>ENGINEERING</span></div><h3>B.S. Computer Science</h3><p>Henry Samueli School of Engineering</p><div className="education-meta"><span>Math minor</span><span>Expected Jun 2030</span></div><div className="education-bottom"><span className="status-dot" /> FIRST YEAR · CLASS OF 2030</div></aside></div>
+        <div className="about-grid"><div className="about-copy"><p className="lead">My main interest is software engineering, especially backend systems and infrastructure.</p><p>I’m a Computer Science student at UCLA’s Henry Samueli School of Engineering, with a math minor. I’m originally from the Greater NYC area. Before UCLA, I spent several years on deep-learning research and programmed robots for FIRST Robotics.</p><p>At Brown University Health, I research deep learning for breast cancer imaging. Outside research, I’m interested in how large software systems are built and maintained. I’m also in BSE’s Quantitative Finance fellowship at UCLA.</p></div><aside className="education"><div className="eyebrow">EDUCATION</div><div className="education-logo">UCLA<span>ENGINEERING</span></div><h3>B.S. Computer Science</h3><p>Henry Samueli School of Engineering</p><div className="education-meta"><span>Math minor</span><span>Expected Jun 2030</span></div><div className="education-bottom"><span className="status-dot" /> FIRST YEAR · CLASS OF 2030</div></aside></div>
       </section>
 
       <section className="section container" id="experience" aria-labelledby="experience-heading">
