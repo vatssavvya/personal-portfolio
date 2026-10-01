@@ -20,3 +20,7 @@ Lighthouse scores were not measured. No Vercel deployment was performed; deploym
 ## LinkedIn content update
 
 Experience order and role details were checked against the supplied three-page LinkedIn export. Project descriptions were checked against the three public repository READMEs. The PDF has no Projects section. No em dashes are present in the rendered page. Lint, production build, and type checking passed; the updated desktop and mobile preview showed no console errors or horizontal overflow.
+
+## Blue design update
+
+Lint, Webpack production build, and type checking passed. Desktop and mobile views were reviewed. Internal section links resolve; mobile navigation closes with Escape and after selecting a section. No console errors or horizontal overflow were observed. Each section has a single labeled heading. The favicon, Apple icon, and browser theme color use the blue palette. Decorative illustration and chart components were removed.

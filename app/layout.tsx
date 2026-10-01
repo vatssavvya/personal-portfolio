@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary", title: site.title, description: site.description },
   icons: { icon: "/icon.svg", apple: "/apple-icon.png" },
 };
-export const viewport: Viewport = { themeColor: "#0b0d0c", colorScheme: "dark" };
+export const viewport: Viewport = { themeColor: "#101722", colorScheme: "dark" };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body>{children}</body></html>;
 }

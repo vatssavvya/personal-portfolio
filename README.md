@@ -1,6 +1,6 @@
 # Savya Vats · Portfolio
 
-A complete single-page portfolio built with Next.js App Router, TypeScript, and Tailwind CSS. The page is rendered on the server; only the mobile navigation uses a client component. It uses lightweight inline SVG illustrations, local system fonts, and no external widgets or image services.
+A complete single-page portfolio built with Next.js App Router, TypeScript, and Tailwind CSS. The page is rendered on the server; only the mobile navigation uses a client component. It uses local system fonts, small SVG link icons, and no external widgets or image services.
 
 ## Run locally
 
@@ -61,7 +61,7 @@ No account credentials or API keys are required. No deployment has been made by 
 
 ## Design and accessibility
 
-Near-black surfaces, restrained green accents, clean editorial spacing, a compact technical hero, and a featured probabilistic-modeling project. Responsive layouts include a keyboard-accessible mobile menu, skip link, visible focus states, semantic sections, descriptive links, and reduced-motion support. The probabilistic graphic is conceptual artwork rather than research results or project output.
+Midnight blue surfaces, pale blue accents, serif headings, and open project rows. The hero connects directly to Savya’s medical imaging research, BSE fellowship, and software projects. Decorative charts, abstract technical art, numbered labels, gradients, and repeated cards are omitted. Responsive layouts include a keyboard-accessible mobile menu, skip link, visible focus states, semantic sections, descriptive links, and reduced-motion support.
 
 SEO and Open Graph title/description metadata are in `app/layout.tsx`. The custom SVG favicon is `app/icon.svg`, and the Apple icon is `public/apple-icon.png`. An Open Graph image is intentionally omitted because no sharing image was supplied or requested.
 
