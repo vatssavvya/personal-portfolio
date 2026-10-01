@@ -17,7 +17,7 @@ export function Motion() {
     };
     const reveal = (element: Element, delay = 0) => {
       const animation = element.animate(
-        [{ opacity: 0.25, transform: "translateY(32px)" }, { opacity: 1, transform: "translateY(0)" }],
+        [{ opacity: 0.45, transform: "translateY(28px)" }, { opacity: 1, transform: "translateY(0)" }],
         { duration: 800, delay, easing: "cubic-bezier(.2,.7,.2,1)" },
       );
       animations.add(animation);

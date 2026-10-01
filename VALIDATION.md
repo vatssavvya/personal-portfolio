@@ -39,3 +39,11 @@ Lint, Webpack production build, and type checking passed. Desktop and mobile vie
 - Modern browsers use view timelines for scroll-driven fade and vertical movement across 22 content blocks. Older browsers retain IntersectionObserver entrance animations.
 - Browser inspection confirmed all 22 scroll targets, native `view()` timelines, and pre-entry opacity/translation states. Completed content returns to full opacity and zero translation. No browser errors.
 - Lint, production build, and type checking passed.
+
+## Organization logos and experience layout
+
+- Official BSE, Brown, UCLA, and FDU logo assets are served locally. Source URLs and Brown SVG symbol extraction are documented in `public/logos/SOURCES.md`. Logos keep original colors and aspect ratios. Builder Bears uses its team number, not an invented logo.
+- Desktop and 390px mobile layouts visually reviewed. All four images loaded successfully, no horizontal overflow, and no browser errors.
+- Experience navigation highlights the current section. Logo hover movement and native scroll reveals respect reduced-motion settings.
+- UCLA's name remains accessible alongside the decorative logo.
+- Lint, production build, and type checking passed.

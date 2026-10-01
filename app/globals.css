@@ -145,7 +145,7 @@ svg { flex-shrink: 0; }
   }
 }
 @keyframes scroll-reveal {
-  from { opacity: .25; transform: translateY(32px); }
+  from { opacity: .45; transform: translateY(28px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .social-link { color: var(--accent); }
@@ -178,6 +178,27 @@ a:hover .link-arrow, a:focus-visible .link-arrow { transform: translate(2px, -2p
 .footer-socials a { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
 .footer-socials a:hover { color: var(--accent); }
 .back-top { margin-left: 14px; }
+/* Organization marks retain their original colors and aspect ratios. */
+.organization-mark { display: flex; align-items: center; justify-content: center; width: 136px; height: 64px; flex-shrink: 0; margin-bottom: 20px; }
+.organization-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.mark-brown, .mark-fdu { background: #fff; padding: 8px 12px; border-radius: 3px; }
+.mark-brown img { width: 102px; }
+.mark-bse { width: 58px; height: 58px; border-radius: 50%; overflow: hidden; }
+.mark-ucla { width: 104px; height: 36px; justify-content: flex-start; margin-bottom: 0; }
+.mark-team { width: 92px; justify-content: flex-start; }
+.team-number { font-family: var(--mono); color: var(--accent); font-size: 22px; letter-spacing: -1px; border-bottom: 1px solid var(--accent); padding-bottom: 4px; }
+.experience-period { border-left: 1px solid var(--line); padding-left: 14px; transition: border-color .3s; }
+.experience-row { padding-block: 34px; }
+.experience-row:hover .experience-period { border-color: var(--accent); }
+.role-heading h3 { transition: color .3s ease; }
+.experience-row:hover .role-heading h3 { color: var(--accent); }
+.education-logo .organization-mark { margin-top: 5px; }
+.navigation a[aria-current="location"] { color: var(--accent); }
+.navigation a[aria-current="location"]::after { transform: scaleX(1); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .organization-mark { transition: transform .3s ease; }
+  .experience-row:hover .organization-mark { transform: translateY(-3px); }
+}
 @media(max-width:1024px) {
   .container { width: calc(100% - 64px); }
   .hero, .about-grid { gap: 45px; }
@@ -216,7 +237,14 @@ a:hover .link-arrow, a:focus-visible .link-arrow { transform: translate(2px, -2p
   .education-logo { font-size: 28px; }
   .experience-row { grid-template-columns: 1fr; gap: 13px; padding-block: 25px; }
   .experience-date { display: flex; flex-wrap: wrap; gap: 5px 15px; font-size: 10px; }
-  .experience-date small { margin: 0; font-size: 10px; }
+  .experience-date small { margin: 3px 0 0; font-size: 10px; }
+  .experience-date { align-items: center; gap: 18px; }
+  .experience-date .organization-mark { margin-bottom: 0; width: 110px; height: 50px; }
+  .experience-date .mark-bse { width: 50px; }
+  .experience-date .mark-team { width: 78px; }
+  .experience-period { padding-left: 12px; }
+  .experience-row { gap: 20px; }
+  .team-number { font-size: 19px; }
   .role-heading { gap: 12px; }
   .role-heading h3 { font-size: 17px; }
   .role-heading p { font-size: 10px; line-height: 1.9; }

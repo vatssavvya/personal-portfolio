@@ -1,6 +1,6 @@
 # Savya Vats · Portfolio
 
-A complete single-page portfolio built with Next.js App Router, TypeScript, and Tailwind CSS. The page is rendered on the server; the mobile navigation and optional motion use small client components. It uses local system fonts, small SVG link icons, and no external widgets or image services.
+A complete single-page portfolio built with Next.js App Router, TypeScript, and Tailwind CSS. The page is rendered on the server; the mobile navigation and optional motion use small client components. It uses local system fonts, small SVG link icons, and no external widgets or image services. Organization logos are served locally; their sources are recorded in `public/logos/SOURCES.md`.
 
 ## Run locally
 

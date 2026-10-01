@@ -19,6 +19,7 @@ export const navigation = [
 export const experiences = [
   {
     "organization": "Bruin Software Engineers",
+    "logo": "bse",
     "team": "Quantitative Finance Fellowship",
     "role": "Quant Finance Fellow",
     "dates": "Sep 2026 to Present",
@@ -32,6 +33,7 @@ export const experiences = [
   },
   {
     "organization": "Brown University",
+    "logo": "brown",
     "team": "Radiology AI Lab",
     "role": "Research Assistant",
     "dates": "Aug 2025 to Present",
@@ -45,6 +47,7 @@ export const experiences = [
   },
   {
     "organization": "Builder Bears",
+    "logo": "team",
     "team": "FIRST Robotics Competition · Team 10366",
     "role": "Lead Programmer",
     "dates": "Jun 2024 to Jun 2026",
@@ -58,6 +61,7 @@ export const experiences = [
   },
   {
     "organization": "Fairleigh Dickinson University",
+    "logo": "fdu",
     "team": "Medical Imaging Research",
     "role": "Research Assistant",
     "dates": "Mar 2022 to Jun 2026",
