@@ -1,76 +1,76 @@
-# Savya Vats — Personal Portfolio
+# Savya Vats · Portfolio
 
-Personal portfolio website for **Savya Vats**, a Computer Science student at UCLA interested in software engineering, machine learning, backend systems, and quantitative problem solving.
+A complete single-page portfolio built with Next.js App Router, TypeScript, and Tailwind CSS. The page is rendered on the server; only the mobile navigation uses a client component. It uses lightweight inline SVG illustrations, local system fonts, and no external widgets or image services.
 
-The site highlights my research experience, technical projects, UCLA involvement, and current areas of focus.
+## Run locally
 
-## Live Site
+Use Node.js 20.9 or newer and pnpm 11:
 
-Coming soon via Vercel.
+```sh
+pnpm install
+pnpm dev
+```
 
-## About
+Open http://localhost:3000.
 
-I am currently studying Computer Science at UCLA's Henry Samueli School of Engineering.
+```sh
+pnpm lint
+pnpm typecheck
+pnpm build
+pnpm start
+```
 
-My interests include:
+The committed lockfile preserves the checked dependency versions.
 
-- Software Engineering
-- Backend & Infrastructure Systems
-- Machine Learning
-- Computer Vision
-- Algorithms
-- Probabilistic Modeling
-- Quantitative Finance
-- Robotics
+## Content updates
 
-My current work includes medical imaging research using deep learning and vision-language models, as well as participation in Bruin Software Engineers' Quantitative Finance Fellowship.
+All portfolio content is in `lib/portfolio.ts`.
 
-## Featured Experience
+| Update | Exact value | How |
+| --- | --- | --- |
+| Resume | `site.resumeUrl` | Place your PDF at `public/resume.pdf` and set this value to `/resume.pdf`. The navigation link appears automatically. |
+| Email | `site.email` | Set your email address. A mailto button appears only in the contact section. An empty string hides it. |
+| Project links | `projects[].url` and optional `projects[].demoUrl` | Set a verified public URL. Omit a property to hide its button. |
+| BSE project | `bseProject` | Replace `null` with an object containing `title`, `category`, `description`, `tags`, and optional `url` / `demoUrl` when the work is complete. It automatically appears in Projects. Update the BSE entry in `experiences` and the `currently` list as needed. |
+| Publications | `publications` | Add entries with `title`, `venue`, `year`, and `url`. Verified publication cards appear in Research automatically. |
+| Current activities | `currently` | Edit the four short strings. |
+| Experience | `experiences` | Update dates, role, bullets, location, and `current` flag. |
+| Research | `research` | Update descriptions and status notes when appropriate. Keep private research URLs absent until clearance. |
+| Social links / SEO | `site` | Update profile URLs, title, and description. |
 
-- **Brown University Health — Radiology AI Lab**  
-  Research on deep learning and vision-language models for medical imaging.
+Example future fellowship project:
 
-- **Bruin Software Engineers — Quantitative Finance Fellow**  
-  Exploring software engineering, mathematics, and quantitative finance through UCLA's BSE Fellowship.
+```ts
+export const bseProject: Project | null = {
+  title: "Verified project title",
+  category: "Quantitative methods",
+  description: "Describe the completed work and your actual contribution.",
+  tags: ["Actual technologies"],
+  // url: "Add a verified public repository URL here",
+};
+```
 
-- **Fairleigh Dickinson University — Research Assistant**  
-  Deep learning research with multiple co-authored publications and research presentations.
+## Deploy on Vercel
 
-- **FIRST Robotics — Lead Programmer**  
-  Led robot software development in Java for FRC Team 10366.
+1. Push the contents of this folder to your Git repository.
+2. Import the repository in Vercel. If this folder is nested in a larger repository, select it as the Root Directory.
+3. Use the automatically detected Next.js preset; the build command is `pnpm build`. No custom output directory is needed.
+4. Set `NEXT_PUBLIC_SITE_URL` to your production origin, such as `https://your-domain.example`. This enables canonical, sitemap, and robots sitemap metadata. Redeploy after changing it.
 
-## Featured Projects
+No account credentials or API keys are required. No deployment has been made by this project setup.
 
-### Pokémon VGC Predictor
+## Design and accessibility
 
-Probabilistic prediction project focused on Bayesian inference and competitive Pokémon VGC outcomes.
+Near-black surfaces, restrained green accents, clean editorial spacing, a compact technical hero, and a featured probabilistic-modeling project. Responsive layouts include a keyboard-accessible mobile menu, skip link, visible focus states, semantic sections, descriptive links, and reduced-motion support. The probabilistic graphic is conceptual artwork rather than research results or project output.
 
-### ClearCare
+SEO and Open Graph title/description metadata are in `app/layout.tsx`. The custom SVG favicon is `app/icon.svg`, and the Apple icon is `public/apple-icon.png`. An Open Graph image is intentionally omitted because no sharing image was supplied or requested.
 
-Hackathon project where I primarily contributed to backend development using FastAPI and PostgreSQL.
+## Content verification
 
-### AI Research Agent
+All three project URLs were matched against Savya's public GitHub repositories. The AI Research Agent repository README identifies the research assistant and structured output capabilities. Copy follows the supplied brief rather than expanding claims from repository descriptions. Brown code has no public link; its paper remains in progress. The fellowship has no completed project claim. ClearCare describes a backend contribution to a two-person build. Publication titles and metrics have not been invented.
 
-AI research assistant built with LangChain and Pydantic, including structured workflows and real-time web querying.
+### Verified repositories
 
-## Tech Stack
-
-### Languages
-
-Python · Java · C · C++ · JavaScript · Lua · HTML · CSS
-
-### Tools & Libraries
-
-PyTorch · TensorFlow · Keras · FastAPI · PostgreSQL · Pydantic · Pandas · NumPy · scikit-learn · Jupyter
-
-### Website
-
-Next.js · TypeScript · Tailwind CSS · Vercel
-
-## Development
-
-Clone the repository:
-
-```bash
-git clone https://github.com/vatssavvya/portfolio.git
-cd portfolio
+- https://github.com/vatssavvya/pokemon-vgc-cts-predictor
+- https://github.com/vatssavvya/clearcare
+- https://github.com/vatssavvya/Self-Learning-AI-Agent
