@@ -24,3 +24,11 @@ Experience order and role details were checked against the supplied three-page L
 ## Blue design update
 
 Lint, Webpack production build, and type checking passed. Desktop and mobile views were reviewed. Internal section links resolve; mobile navigation closes with Escape and after selecting a section. No console errors or horizontal overflow were observed. Each section has a single labeled heading. The favicon, Apple icon, and browser theme color use the blue palette. Decorative illustration and chart components were removed.
+
+## Social links, contact, typography, and motion
+
+- Lint, webpack production build, and TypeScript checks passed.
+- Browser inspection confirmed GitHub and LinkedIn profile destinations in the hero, section headings, Contact, and footer. Project title links match their repository links.
+- UCLA email is visible as `vatssavvya@ucla.edu`, with the matching mailto destination.
+- Desktop and mobile contact layouts reviewed. Mobile navigation closes after choosing Contact; no horizontal overflow at the tested mobile width. Browser error log was empty.
+- Motion uses one-time intersection reveals with cleanup. Content is never hidden by CSS or dependent on JavaScript to appear. Reduced-motion preferences skip Web Animations and disable CSS motion.

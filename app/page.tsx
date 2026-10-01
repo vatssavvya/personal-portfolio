@@ -1,3 +1,4 @@
+import { Motion } from "@/components/motion";
 import { Header } from "@/components/header";
 import { Arrow, GitHubIcon } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
@@ -12,6 +13,7 @@ export default function Home() {
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
     <Header />
+    <Motion />
     <main id="main">
       <section className="hero container" id="home" aria-labelledby="hero-title">
         <div className="hero-copy">
@@ -36,16 +38,16 @@ export default function Home() {
       </section>
 
       <section className="section container" id="experience" aria-labelledby="experience-heading">
-        <SectionHeading id="experience-heading" title="Experience" />
+        <SectionHeading id="experience-heading" title="Experience" action={<ExternalLink href={site.linkedin} className="text-link">Experience on LinkedIn</ExternalLink>} />
 
         <div className="experience-list">{experiences.map((experience) => <article className={`experience-row ${experience.current ? "current-role" : ""}`} key={experience.organization}><div className="experience-date"><span className="timeline-point" /><span>{experience.dates}</span><small>{experience.location || "Engineering team"}</small></div><div className="experience-content"><div className="role-heading"><div><h3>{experience.organization}</h3><p>{experience.role}<span className="separator">/</span>{experience.team}</p></div>{experience.current && <span className="current-badge">Current</span>}</div><ul>{experience.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul></div></article>)}</div>
       </section>
 
       <section className="section container" id="projects" aria-labelledby="projects-heading">
-        <SectionHeading id="projects-heading" title="Selected projects" />
+        <SectionHeading id="projects-heading" title="Selected projects" action={<ExternalLink href={site.github} className="text-link">All repositories on GitHub</ExternalLink>} />
 
         <div className="project-list">{allProjects.map((project) => <article key={project.title} className={project.featured ? "project-row featured-project" : "project-row"}>
-          <div className="project-title"><p className="eyebrow">{project.category}</p><h3>{project.title}</h3>{project.featured && <span className="project-featured-label">Featured project</span>}</div>
+          <div className="project-title"><p className="eyebrow">{project.category}</p><h3>{project.url ? <ExternalLink href={project.url} className="project-title-link">{project.title}</ExternalLink> : project.title}</h3>{project.featured && <span className="project-featured-label">Featured project</span>}</div>
           <div className="project-detail"><p>{project.description}</p><div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div><div className="project-links">{project.url && <ExternalLink href={project.url} className="text-link"><GitHubIcon />View code</ExternalLink>}{project.demoUrl && <ExternalLink href={project.demoUrl} className="text-link">Live demo</ExternalLink>}</div></div>
         </article>)}</div>
       </section>
@@ -61,8 +63,8 @@ export default function Home() {
 
       <section className="currently container" aria-labelledby="currently-heading"><div><h2 id="currently-heading">Currently</h2><p>What I’m working on now.</p></div><ul>{currently.map(item => <li key={item}>{item}</li>)}</ul></section>
 
-      <section className="contact container" id="contact" aria-labelledby="contact-heading"><div className="contact-row"><div><h2 id="contact-heading">Get in touch</h2><p>Feel free to reach out about software engineering, research, or a project.</p></div><div className="contact-links">{site.email && <a className="button button-primary" href={`mailto:${site.email}`}>Send an email <Arrow diagonal /></a>}<ExternalLink href={site.linkedin} className="contact-link">Connect on LinkedIn</ExternalLink><ExternalLink href={site.github} className="contact-link">GitHub</ExternalLink></div></div></section>
+      <section className="contact container" id="contact" aria-labelledby="contact-heading"><div className="contact-row"><div><h2 id="contact-heading">Get in touch</h2><p>Feel free to reach out about software engineering, research, or a project.</p></div><div className="contact-links">{site.email && <a className="contact-link contact-email" href={`mailto:${site.email}`}>{site.email} <Arrow diagonal /></a>}<ExternalLink href={site.linkedin} className="contact-link">Connect on LinkedIn</ExternalLink><ExternalLink href={site.github} className="contact-link">GitHub</ExternalLink></div></div></section>
     </main>
-    <footer className="container footer"><a href="#home" className="brand-mark" aria-label="Back to top">SV</a><p>© {new Date().getFullYear()} Savya Vats</p><a className="back-top" href="#home">BACK TO TOP <span aria-hidden="true">↑</span></a></footer>
+    <footer className="container footer"><a href="#home" className="brand-mark" aria-label="Back to top">SV</a><p>© {new Date().getFullYear()} Savya Vats</p><div className="footer-socials"><ExternalLink href={site.github}>GitHub</ExternalLink><ExternalLink href={site.linkedin}>LinkedIn</ExternalLink></div><a className="back-top" href="#home">BACK TO TOP <span aria-hidden="true">↑</span></a></footer>
   </>;
 }

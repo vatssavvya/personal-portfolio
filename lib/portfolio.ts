@@ -4,7 +4,7 @@ export const site = {
   description: "UCLA Computer Science student working across software engineering, machine learning research, and quantitative problem solving.",
   github: "https://github.com/vatssavvya",
   linkedin: "https://linkedin.com/in/savyavats",
-  email: "", // Add your email to show a contact link in the footer.
+  email: "vatssavvya@ucla.edu",
   resumeUrl: "", // Add /resume.pdf and place the file in public/ to show Resume.
   origin: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "",
 };
