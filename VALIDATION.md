@@ -47,3 +47,10 @@ Lint, Webpack production build, and type checking passed. Desktop and mobile vie
 - Experience navigation highlights the current section. Logo hover movement and native scroll reveals respect reduced-motion settings.
 - UCLA's name remains accessible alongside the decorative logo.
 - Lint, production build, and type checking passed.
+
+## Editorial design and education correction
+
+- Desktop hero, featured project, and pale-blue Contact block visually reviewed. Mobile Contact reviewed at 390px. Navigation spacing measures 28px on desktop. No horizontal overflow or browser errors.
+- Contact text contrast: 10.24:1 for the primary text and 6.36:1 for supporting text. Muted labels on the dark background: 7.26:1.
+- Browser text inspection confirms no math-minor claim and no em dashes. Existing profile and email links remain intact.
+- Lint, TypeScript checks, and the final production build passed.

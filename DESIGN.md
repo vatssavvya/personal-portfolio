@@ -21,3 +21,7 @@ These patterns are design judgments, not reliable tests of whether a website was
 - Introductory reveal animations and extra section headings announced by screen readers.
 
 All accents use CSS variables in app/globals.css. Content remains in lib/portfolio.ts. SVG icon and Apple icon colors are updated with the palette.
+
+## Editorial refinement
+
+The hero uses an oversized serif name with an italic surname. Its supporting work links sit behind a vertical rule, giving the main introduction more space. About uses a serif lead with a compact education panel. The featured project gets a single contrasting surface; other projects retain open rows. Research uses vertical accent rules. Contact switches to pale blue with dark text and controls. This creates distinct moments across the page without adding decorative graphics or new claims. The undecided math minor has been removed from About and Education.
