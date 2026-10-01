@@ -20,7 +20,7 @@ export default function Home() {
           <div className="eyebrow hero-eyebrow">UCLA · CLASS OF 2030</div>
           <h1 id="hero-title">Savya Vats</h1>
           <p className="hero-subtitle">Computer Science at UCLA</p>
-          <p className="hero-description">I study Computer Science at UCLA. I work on medical imaging research and backend projects, and I’m exploring quantitative finance through Bruin Software Engineers.</p>
+          <p className="hero-description">I’m a Computer Science student at UCLA interested in software engineering, machine learning, and quantitative problem solving. My work includes deep learning research for medical imaging at Brown University and AI agents that query the web in real time. Long term, I want to build backend infrastructure and large-scale software systems.</p>
           <div className="hero-actions"><a className="button button-primary" href="#projects">View projects <Arrow /></a><ExternalLink href={site.github} className="button button-secondary social-link"><GitHubIcon />GitHub</ExternalLink><ExternalLink href={site.linkedin} className="button button-secondary social-link"><LinkedInIcon />LinkedIn</ExternalLink></div>
           <p className="hero-location">New York City and Los Angeles</p>
         </div>
